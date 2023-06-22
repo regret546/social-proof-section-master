@@ -1,4 +1,23 @@
 :root {
+  /* Primary Colors */
+  --clr--very-dark-magenta: hsl(300, 43%, 22%);
+  --clr--soft-pink: hsl(333, 80%, 67%);
+
+  /*Neutral Colors */
+  --clr--dark-grayish-magenta: hsl(303, 10%, 53%);
+  --clr--light-grayish-magenta: hsl(300, 24%, 96%);
+  --clr--white: hsl(0, 0%, 100%);
+
+  /* Font Size */
+  --fs--normal: 15px;
+
+  /* Font Family */
+  --ff--primary: "League Spartan", sans-serif;
+
+  /* Font Weight */
+  --fw--regular: 400;
+  --fw--bold: 500;
+  --fw--very-bold: 700;
 }
 
 /*
@@ -62,4 +81,10 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+body {
+  font-family: var(--ff--primary);
+  font-size: var(--fs--normal);
+  color: var(--clr--very-dark-magenta);
 }
