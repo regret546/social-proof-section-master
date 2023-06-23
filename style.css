@@ -34,6 +34,11 @@
 * {
   margin: 0;
 }
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
 /*
     Typographic tweaks!
     3. Add accessible line-height
@@ -87,4 +92,50 @@ body {
   font-family: var(--ff--primary);
   font-size: var(--fs--normal);
   color: var(--clr--very-dark-magenta);
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.social__main {
+  display: grid;
+  gap: 3rem;
+}
+
+.social__main_header {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.social__main_header h1 {
+  font-size: 36px;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.main__header_secondary ul {
+  display: grid;
+  gap: 1rem;
+}
+
+.main__header_secondary li {
+  list-style-type: none;
+  font-size: 1rem;
+  font-weight: var(--fw--bold);
+}
+
+.main__header_secondary li::before {
+  content: "";
+  background: url("images/icon-star.svg");
+  height: 1rem;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  background-repeat: space;
+  margin-bottom: 0.5rem;
 }
