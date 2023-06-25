@@ -95,8 +95,9 @@ body {
 }
 
 .container {
-  background: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg") ;
-  background-size: 100%, auto , 100%, auto;
+  background: url("images/bg-pattern-top-mobile.svg"),
+    url("images/bg-pattern-bottom-mobile.svg");
+  background-size: 100%, auto, 100%, auto;
   background-repeat: no-repeat, no-repeat;
   background-position: top 0 left 0, bottom 0 right 0;
   min-height: 100vh;
@@ -108,6 +109,7 @@ body {
 
 .social__main {
   display: grid;
+  justify-items: center;
   gap: 3rem;
 }
 
@@ -122,12 +124,16 @@ body {
   width: 80%;
   line-height: 2rem;
   margin-bottom: 1.5rem;
-  
 }
 
 .main__header_secondary ul {
   display: grid;
   gap: 1rem;
+  font-weight: var(--fw--bold);
+}
+
+.main__header_secondary li {
+  font-weight: var(--fw--very-bold) !important;
 }
 
 .main__header_secondary li {
@@ -146,6 +152,7 @@ body {
   height: 1rem;
   width: 100px;
   display: block;
+  align-items: center;
   margin: 0 auto;
   background-repeat: space;
   margin-bottom: 0.5rem;
@@ -153,6 +160,7 @@ body {
 
 .main__cards_info {
   display: grid;
+  justify-items: center;
   gap: 1rem;
   text-align: left;
   color: var(--clr--white);
@@ -164,24 +172,25 @@ body {
   padding: 3rem 1.5rem;
   border-radius: 0.5rem;
   gap: 1rem;
+  max-width: 375px;
 }
 
 .flex-group {
   display: flex;
   gap: 1.3rem;
-  align-items: flex-end;  
+  align-items: flex-end;
 }
 
 .flex-group h2 {
-font-size: var(--fs--normal);
+  font-size: var(--fs--normal);
 }
 
 .flex-group span {
-font-weight: var(--fw--regular);
-color: var(--clr--soft-pink);
+  font-weight: var(--fw--regular);
+  color: var(--clr--soft-pink);
 }
 
-.flex-group span{
+.flex-group span {
   display: block;
 }
 
@@ -189,4 +198,41 @@ color: var(--clr--soft-pink);
   height: 48px;
   width: 48px;
   border-radius: 48px;
+}
+
+/* Desktop Design */
+
+@media only screen and (min-width: 992px) {
+  .social__main_header {
+    max-width: 80%;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+
+  .main__header_primary {
+    margin-right: 5rem;
+  }
+
+  .main__header_secondary li:nth-of-type(2) {
+    margin-left: 50px;
+    padding-right: 0;
+  }
+
+  .main__header_secondary li:nth-of-type(3) {
+    margin-left: 100px;
+  }
+
+  .main__header_secondary li::before {
+    content: "";
+    background: url("images/icon-star.svg");
+    height: 1rem;
+    width: 100px;
+    display: inline-block;
+    margin: 0 auto;
+    background-repeat: space;
+    margin-bottom: 0.5rem;
+    margin-right: 25px;
+    vertical-align: middle;
+  }
 }
